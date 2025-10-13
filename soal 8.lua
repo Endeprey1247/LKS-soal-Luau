@@ -21,7 +21,7 @@ local function hitung_volatilitas(array)
 	return hasil
 end
 
-print(hitung_volatilitas({-8, -3, -1, 2, 5, 9}))
+print(hitung_volatilitas({-6, -2, 0, 3, 5}))
 print(hitung_volatilitas({-8, -3, -1, 2, 5, 9}))
 print(hitung_volatilitas({-10, -7, -4}))
 print(hitung_volatilitas({1, 3, 5, 8}))
