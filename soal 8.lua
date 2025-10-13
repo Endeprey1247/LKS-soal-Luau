@@ -1,27 +1,26 @@
---soal 8
-local function hitung_volatilitas(selisih)
-	local n = #selisih
-	local hasil = selisih[1] * n
-	
-	local function quickSort()
-		local pivot = selisih[1]
-		local left = {}
-		local right = {}
-		for i = 2, n do
-			if selisih[i] < pivot then
-				table.insert(left, selisih[i])
-			else
-				table.insert(right, selisih[i])
-			end
+local mikir = {-8, -3, -1, 2, 5, 9}
+
+--[[function reverseSort(a, b)
+	return a > b
+end]]
+
+local function hitung_volatilitas(array)
+	local hasil = {}
+	local awal = 1
+	local akhir = #array
+
+	for i = 1, #array do
+		if array[awal] ^ 2 < array[akhir] ^ 2 then
+			table.insert(hasil, array[akhir] ^ 2)
+			akhir = akhir - 1
+		else
+			table.insert(hasil, array[awal] ^ 2)
+			awal = awal + 1
 		end
-		return quickSort(left) + pivot + quickSort(right)
 	end
-	
+
 	return hasil
 end
 
-local result = hitung_volatilitas()
-print(result({-6, -2, 0, 3, 5}))
-print(result({-8, -3, -1, 2, 5, 9}))
-print(result({-10, -7, -4}))
-print(result({1, 3, 5, 8}))
+local result = hitung_volatilitas(mikir)
+print(result)
