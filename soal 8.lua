@@ -1,4 +1,8 @@
 -- soal 8
+--[[function reverseSort(a, b)
+	return a > b
+end]]
+
 local function hitung_volatilitas(array)
 	local hasil = {}
 	local awal = 1
@@ -18,3 +22,6 @@ local function hitung_volatilitas(array)
 end
 
 print(hitung_volatilitas({-8, -3, -1, 2, 5, 9}))
+print(hitung_volatilitas({-8, -3, -1, 2, 5, 9}))
+print(hitung_volatilitas({-10, -7, -4}))
+print(hitung_volatilitas({1, 3, 5, 8}))
