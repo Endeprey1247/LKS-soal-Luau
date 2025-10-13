@@ -13,6 +13,8 @@ function duplikasiVoucher(KodeVoucher)
 				if jumlah > 1 then
 					print("Kebanyakan voucher di " .. KodeVoucher[i])
 					break
+				else
+					print("kode voucher unik")
 				end
 			end
 		end
@@ -21,46 +23,6 @@ function duplikasiVoucher(KodeVoucher)
 	return kelompok
 end
 
-local hasil = duplikasiVoucher(voucher)
-print(hasil)
-
-function duplicatedVoucher(voucherCode)
-	local kelompok = {}
-	for i = 1, #voucherCode do
-		local jumlah = 0
-		for j = 1, #voucherCode do
-			if voucherCode[i] == voucherCode[j] then
-				jumlah = jumlah + 1
-				if jumlah > 1 then
-					print("there's too much voucher in " .. voucherCode[i])
-					break
-				else
-					print("Semua kode voucher unik")
-					break
-				end
-			end
-		end
-		kelompok[voucherCode[i]] = jumlah
-	end
-	return kelompok
-end
-
-local result = duplicatedVoucher(voucher2)
-print(result)
-
-function MultiDuplicatedVoucher(DuppedVoucher)
-	local kelompok = {}
-	for i = 1, #DuppedVoucher do
-		local jumlah = 0
-		for j = 1, #DuppedVoucher do
-			if DuppedVoucher[i] == DuppedVoucher[j] then
-				jumlah = jumlah + 1
-			end
-		end
-		kelompok[DuppedVoucher[i]] = jumlah
-	end
-	return kelompok
-end
-
-local result2 = MultiDuplicatedVoucher(voucher3)
-print(result2)
+print(duplikasiVoucher(voucher))
+print(duplikasiVoucher(voucher2))
+print(duplikasiVoucher(voucher3))
