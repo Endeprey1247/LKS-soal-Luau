@@ -1,2 +1,2 @@
 # LKS-soal-Luau
-Lks buat lua help meeeeeeeee
+Lks buat luau help meeeeeeeee
